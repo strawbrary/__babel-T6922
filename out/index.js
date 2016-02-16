@@ -1,32 +1,25 @@
 'use strict';
 
-import _regeneratorRuntime from 'babel-runtime/regenerator';
+import _Object$defineProperty from 'babel-runtime/core-js/object/define-property';
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = _callee;
 
-var _keys = require('babel-runtime/core-js/object/keys');
+var _test = require('./test');
 
-var _keys2 = _interopRequireDefault(_keys);
+var _loop = function _loop(_key2) {
+  if (_key2 === "default") return 'continue';
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var _marked = [_callee].map(_regeneratorRuntime.mark);
-
-function _callee() {
-  return regeneratorRuntime.wrap(function _callee$(_context) {
-    while (1) switch (_context.prev = _context.next) {
-      case 0:
-        // inclusion of the following line causes a failure
-        (0, _keys2.default)({ foo: 'bar', bar: 'foo' });
-
-        _context.next = 3;
-        return 'foo';
-
-      case 3:
-      case 'end':
-        return _context.stop();
+  _Object$defineProperty(exports, _key2, {
+    enumerable: true,
+    get: function get() {
+      return _test[_key2];
     }
-  }, _marked[0], this);
+  });
+};
+
+for (var _key2 in _test) {
+  var _ret = _loop(_key2);
+
+  if (_ret === 'continue') continue;
 }
